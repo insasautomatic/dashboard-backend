@@ -12,6 +12,7 @@ app.use(cors());
 app.use("/table/limits", require("./routes/tableLimits.js"));
 app.use("/config", require("./routes/config.js"));
 app.use("/game", require("./routes/game.js"));
+app.use("/baccarat", require("./routes/baccarat.js"));
 
 app.listen("5000", () => {
   console.log("Server started on port 5000");
