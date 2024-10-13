@@ -38,7 +38,7 @@ const getBaccaratData = async (req, res) => {
         FROM baccarat
         WHERE game_type_id = ? AND table_limit_id = ?
         ORDER BY baccarat_id DESC
-        LIMIT ${data.limit || 10}
+        LIMIT ${req.params.limit || 10}
       `;
 
     const shoeNoValues = [req.params.game_type_id, req.params.table_limit_id];
